@@ -5,4 +5,5 @@ CMakeListsPrivate.txt
 /CMakeLists.txt
 /cmake-build-debug
 /lib
-/platformio.ini
+/.pio
+/.vscode

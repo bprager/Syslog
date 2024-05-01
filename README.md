@@ -48,16 +48,12 @@ Syslog syslog(udpClient, ip, port, device_hostname, app_name, default_priority, 
 Syslog syslog(udpClient, SYSLOG_PROTO_BSD);
 ```
 
-## Limitations
- - This library is sending empty timestamp in the syslog messages. For IETF 
-   format it is `NILVALUE` (char `-`) in `TIMESTAMP` field, for BSD format the 
-   `TIMESTAMP` field is completely ommited. Syslog server should use a time
-   of receiving message in this case. It is OK in most cases. This issue will be
-   fixed in some of the next releases.
+## Dependencies
+ - This library is using the Arduino Time Library to send  timestamp in the syslog messages. 
    
-
 [IETF (RFC 5424)]: https://tools.ietf.org/html/rfc5424
 [BSD (RFC 3164)]: https://tools.ietf.org/html/rfc3164
 [examples]: https://github.com/arcao/Syslog/tree/master/examples
 [AdvancedLogging]: https://github.com/arcao/Syslog/blob/master/examples/AdvancedLogging/AdvancedLogging.ino
 [RTLDUINO]: https://github.com/pvvx/RtlDuino
+[Arduino Time Library]: https://github.com/PaulStoffregen/Time.git
