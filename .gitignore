@@ -7,3 +7,4 @@ CMakeListsPrivate.txt
 /lib
 /.pio
 /.vscode
+/tmp
